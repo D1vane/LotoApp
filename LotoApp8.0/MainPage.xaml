@@ -32,15 +32,28 @@
                 Text="Текущее число"
                 Style="{StaticResource Headline}" />
 
+
                 <Label
+                x:Name="LabelCurrentNumber"
                 Text="22"
                 FontSize="70"
                 HorizontalTextAlignment="Center"
-                SemanticProperties.Description="Текущее число по счету" />
-
-                <Label Text="22/90" FontSize="35" HorizontalTextAlignment="Center"/>
-                <Slider Maximum="90" Value="22" WidthRequest="350" BackgroundColor="#FEFDD4" 
-                        MinimumTrackColor="Gray" ThumbColor="Gray"/>
+                SemanticProperties.Description="Текущее число по счету">
+                   <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="LabelCurrentNumber_Clicked"/>
+                   </Label.GestureRecognizers>
+                </Label>
+                    
+                
+                
+                
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <Label x:Name="LabelCurrentPosition" Text="22" FontSize="35"/>
+                    <Label Text="/90" FontSize="35"/>
+                </HorizontalStackLayout>
+                
+                <Slider Minimum="1" Maximum="90" Value="22" WidthRequest="350" BackgroundColor="#FEFDD4" 
+                        MinimumTrackColor="Gray" ThumbColor="Gray" ValueChanged="Slider_ValueChanged"/>
             </VerticalStackLayout>
 
             <VerticalStackLayout   Spacing="20">
