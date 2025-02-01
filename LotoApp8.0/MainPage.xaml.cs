@@ -1,4 +1,6 @@
-﻿namespace LotoApp8._0
+﻿using System.Xml;
+
+namespace LotoApp8._0
 {
     public partial class MainPage : ContentPage
     {
@@ -23,13 +25,16 @@
 
         }
         /// <summary>
-        /// Фиксация нажатия на текущее число
+        /// Определение порядкого номера искомого числа
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void LabelCurrentNumber_Clicked(object sender, TappedEventArgs e)
+        async private void LabelCurrentNumber_Clicked(object sender, TappedEventArgs e)
         {
-            LabelCurrentNumber.Text = Convert.ToString(Convert.ToInt32(LabelCurrentNumber.Text) + 1);
+            var number = await DisplayPromptAsync("Число", "Введите Число:", "OK", "Отмена", null, 2, Keyboard.Numeric);
+            
+            LabelCurrentNumber.Text = number;
+            SliderOfNumbers.Value = Array.IndexOf(numbers, Convert.ToInt32(number))+1;
         }
         /// <summary>
         /// Создание цепочки случайных чисел
