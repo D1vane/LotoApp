@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using CommunityToolkit.Maui;
+using Microsoft.Extensions.Logging;
+using Plugin.Maui.Audio;
 
 namespace LotoApp8._0
 {
@@ -9,12 +11,15 @@ namespace LotoApp8._0
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseMauiCommunityToolkit()
+                .UseMauiCommunityToolkitMediaElement()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
-
+            builder.Services.AddSingleton(AudioManager.Current);
+            builder.Services.AddTransient<MainPage>();
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
