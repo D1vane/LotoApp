@@ -1,0 +1,205 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LotoApp8._0
+{
+    public static class NumbersInVoice
+    {
+        /// <summary>
+        /// Возвращает название аудиофайла по числу
+        /// </summary>
+        /// <param name="currentNumber"></param>
+        /// <returns></returns>
+        public static string SwitchNumbers1x (int currentNumber)
+        {
+            switch (currentNumber)
+            {
+                case 1:
+                    return "1/voiceOne1x.wav";
+                case 2:
+                    return "2/voiceTwo1x.wav";
+                case 3:
+                    return "3/voiceThree1x.wav";
+                case 4:
+                    return "4/voiceFour1x.wav";
+                case 5:
+                    return "5/voiceFive1x.wav";
+                case 6:
+                    return "6/voiceSix1x.wav";
+                case 7:
+                    return "7/voiceSeven1x.wav";
+                case 8:
+                    return "8/voiceEight1x.wav";
+                case 9:
+                    return "9/voiceNine1x.wav";
+                case 10:
+                    return "10/voiceTen1x.wav";
+                case 11:
+                    return "11/voiceEleven1x.wav";
+                case 12:
+                    return "12/voiceTwelve1x.wav";
+                case 13:
+                    return "13/voiceThirteen1x.wav";
+                case 14:
+                    return "14/voiceFourteen1x.wav";
+                case 15:
+                    return "15/voiceFifteen1x.wav";
+                case 16:
+                    return "16/voiceSixteen1x.wav";
+                case 17:
+                    return "17/voiceSeventeen1x.wav";
+                case 18:
+                    return "18/voiceEighteen1x.wav";
+                case 19:
+                    return "19/voiceNineteen1x.wav";
+                case 20:
+                    return "20/voiceTwenty1x.wav";
+                case 21:
+                    return "21/voiceTwentyone1x.wav";
+                case 22:
+                    return "22/voiceTwentytwo1x.wav";
+                case 23:
+                    return "23/voiceTwentythree1x.wav";
+                case 24:
+                    return "24/voiceTwentyfour1x.wav";
+                case 25:
+                    return "25/voiceTwentyfive1x.wav";
+                case 26:
+                    return "26/voiceTwentysix1x.wav";
+                case 27:
+                    return "27/voiceTwentyseven1x.wav";
+                case 28:
+                    return "28/voiceTwentyeight1x.wav";
+                case 29:
+                    return "29/voiceTwentyNine1x.wav";
+                case 30:
+                    return "30/voiceThirty1x.wav";
+                case 31:
+                    return "31/voiceThirtyone1x.wav";
+                case 32:
+                    return "32/voiceThirtytwo1x.wav";
+                case 33:
+                    return "33/voiceThirtythree1x.wav";
+                case 34:
+                    return "34/voiceThirtyfour1x.wav";
+                case 35:
+                    return "35/voiceThirtyfive1x.wav";
+                case 36:
+                    return "36/voiceThirtysix1x.wav";
+                case 37:
+                    return "37/voiceThirtyseven1x.wav";
+                case 38:
+                    return "38/voiceThirtyeight1x.wav";
+                case 39:
+                    return "39/voiceThirtynine1x.wav";
+                case 40:
+                    return "40/voiceFourty1x.wav";
+                case 41:
+                    return "41/voiceFourtyone1x.wav";
+                case 42:
+                    return "42/voiceFourtytwo1x.wav";
+                case 43:
+                    return "43/voiceFourtythree1x.wav";
+                case 44:
+                    return "44/voiceFourtyfour1x.wav";
+                case 45:
+                    return "45/voiceFourtyfive1x.wav";
+                case 46:
+                    return "46/voiceFourtysix1x.wav";
+                case 47:
+                    return "47/voiceFourtyseven1x.wav";
+                case 48:
+                    return "48/voiceFourtyeight1x.wav";
+                case 49:
+                    return "49/voiceFourtynine1x.wav";
+                case 50:
+                    return "50/voiceFifty1x.wav";
+                case 51:
+                    return "51/voiceFiftyone1x.wav";
+                case 52:
+                    return "52/voiceFiftytwo1x.wav";
+                case 53:
+                    return "53/voiceFiftythree1x.wav";
+                case 54:
+                    return "54/voiceFiftyfour1x.wav";
+                case 55:
+                    return "55/voiceFiftyfive1x.wav";
+                case 56:
+                    return "56/voiceFiftysix1x.wav";
+                case 57:
+                    return "57/voiceFiftyseven1x.wav";
+                case 58:
+                    return "58/voiceFiftyeight1x.wav";
+                case 59:
+                    return "59/voiceFiftynine1x.wav";
+                case 60:
+                    return "60/voiceSixty1x.wav";
+                case 61:
+                    return "61/voiceSixtyone1x.wav";
+                case 62:
+                    return "62/voiceSixtytwo1x.wav";
+                case 63:
+                    return "63/voiceSixtythree1x.wav";
+                case 64:
+                    return "64/voiceSixtyfour1x.wav";
+                case 65:
+                    return "65/voiceSixtyfive1x.wav";
+                case 66:
+                    return "66/voiceSixtysix1x.wav";
+                case 67:
+                    return "67/voiceSixtyseven1x.wav";
+                case 68:
+                    return "68/voiceSixtyeight1x.wav";
+                case 69:
+                    return "69/voiceSixtynine1x.wav";
+                case 70:
+                    return "70/voiceSeventy1x.wav";
+                case 71:
+                    return "71/voiceSeventyone1x.wav";
+                case 72:
+                    return "72/voiceSeventytwo1x.wav";
+                case 73:
+                    return "73/voiceSeventythree1x.wav";
+                case 74:
+                    return "74/voiceSeventyfour1x.wav";
+                case 75:
+                    return "75/voiceSeventyfive1x.wav";
+                case 76:
+                    return "76/voiceSeventysix1x.wav";
+                case 77:
+                    return "77/voiceSeventyseven1x.wav";
+                case 78:
+                    return "78/voiceSeventyeight1x.wav";
+                case 79:
+                    return "79/voiceSeventynine1x.wav";
+                case 80:
+                    return "80/voiceEighty1x.wav";
+                case 81:
+                    return "81/voiceEightyone1x.wav";
+                case 82:
+                    return "82/voiceEightytwo1x.wav";
+                case 83:
+                    return "83/voiceEightythree1x.wav";
+                case 84:
+                    return "84/voiceEightyfour1x.wav";
+                case 85:
+                    return "85/voiceEightyfive1x.wav";
+                case 86:
+                    return "86/voiceEightysix1x.wav";
+                case 87:
+                    return "87/voiceEightyseven1x.wav";
+                case 88:
+                    return "88/voiceEightyeight1x.wav";
+                case 89:
+                    return "89/voiceEightynine1x.wav";
+                case 90:
+                    return "90/voiceNinety1x.wav";
+                default:
+                    return "errorInCode.wav";
+            }
+        }
+    }
+}

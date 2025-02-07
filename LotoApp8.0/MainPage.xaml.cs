@@ -68,15 +68,22 @@ namespace LotoApp8._0
             if (numbers.Length != numbers.Distinct().Count()) SliderOfNumbers.Value = 10;
             else SliderOfNumbers.Value = 1;
             LabelCurrentNumber.Text = Convert.ToString(numbers[0]);
-
-            // Воспроизведение записи
-            var player = audioManger.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("1/voiceOne1x.wav"));
-
-            player.Play();
             
-            // Очитка кэша после воспроизведений
-            if (!player.IsPlaying)
-                player.Dispose();
+            for (int i = 0; i < countOfNumbers; i++)
+            {
+                
+                var player = audioManger.CreatePlayer(await FileSystem.OpenAppPackageFileAsync(NumbersInVoice.SwitchNumbers1x(numbers[i])));
+                LabelCurrentNumber.Text = Convert.ToString(numbers[i]);
+                SliderOfNumbers.Value = i + 1;
+                // Воспроизведение записи
+                player.Play();
+                await Task.Delay(1000);
+            }
+            
+            
+            //// Очитка кэша после воспроизведений
+            //if (!player.IsPlaying)
+            //    player.Dispose();
         }
     }
 
