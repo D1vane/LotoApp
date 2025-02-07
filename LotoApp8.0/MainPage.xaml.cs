@@ -70,7 +70,7 @@ namespace LotoApp8._0
             LabelCurrentNumber.Text = Convert.ToString(numbers[0]);
 
             // Воспроизведение записи
-            var player = audioManger.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("voiceOne.wav"));
+            var player = audioManger.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("1/voiceOne1x.wav"));
 
             player.Play();
             
