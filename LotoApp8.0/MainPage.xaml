@@ -4,66 +4,107 @@
              xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
              x:Class="LotoApp8._0.MainPage"
              Shell.NavBarIsVisible="False">
+    
     <!-- Фон приложения -->
     <ContentPage.Background>
-        
+
         <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
             <GradientStop Color="#FBFBC3"
                           Offset="0.0" />
             <GradientStop Color="#FFFEE3"
                           Offset="1.0" />
         </LinearGradientBrush>
-        
+
     </ContentPage.Background>
+    
     <!-- Цвет для верхной строки (брови) приложения -->
     <ContentPage.Behaviors>
-        
+
         <mct:StatusBarBehavior StatusBarColor="#FBFBC3" StatusBarStyle="DarkContent">
         </mct:StatusBarBehavior>
-        
+
     </ContentPage.Behaviors>
-    
+
     <ScrollView>
-        
+
         <VerticalStackLayout Spacing="80">
 
-            <VerticalStackLayout Margin="0,200,0,0"  Spacing="15" HorizontalOptions="Center" >
-                <Label
-                Text="Текущее число"
-                Style="{StaticResource Headline}" />
+            <VerticalStackLayout Margin="0,150,0,0"  Spacing="15" HorizontalOptions="Center" >
+
+                <Label Text="Текущее число" Style="{StaticResource Headline}" />
 
                 <Label
+                x:Name="LabelCurrentNumber"
                 Text="22"
                 FontSize="70"
                 HorizontalTextAlignment="Center"
-                SemanticProperties.Description="Текущее число по счету" />
+                SemanticProperties.Description="Текущее число по счету">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="LabelCurrentNumber_Clicked"/>
+                    </Label.GestureRecognizers>
+                </Label>
 
-                <Label Text="22/90" FontSize="35" HorizontalTextAlignment="Center"/>
-                <Slider Maximum="90" Value="22" WidthRequest="350" BackgroundColor="#FEFDD4" 
-                        MinimumTrackColor="Gray" ThumbColor="Gray"/>
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <Label x:Name="LabelCurrentPosition" Text="22" FontSize="35"/>
+                    <Label Text="/90" FontSize="35"/>
+                </HorizontalStackLayout>
+
+                <Slider x:Name="SliderOfNumbers" Minimum="1" Maximum="90" Value="22" WidthRequest="350" BackgroundColor="#FEFDD4" 
+                        MinimumTrackColor="Gray" ThumbColor="Gray" ValueChanged="Slider_ValueChanged"/>
             </VerticalStackLayout>
 
             <VerticalStackLayout   Spacing="20">
-            <Label
+                <Label
                 Text="Скорость воспроизведения"
                 Style="{StaticResource SubHeadline}"/>
-            
-            <Label
+
+                <Label
+                x:Name="LabelCurrentSpeed"
                 Text="1x"
                 FontSize="35"
                 HorizontalTextAlignment="Center"
                 SemanticProperties.Description="Текущая скорость воспроизведения"/>
 
-            <HorizontalStackLayout Spacing="15" HorizontalOptions="Center">
+                <HorizontalStackLayout Spacing="15" HorizontalOptions="Center">
 
-                    <Label Text="1x" FontSize="30"/>
-                    <Label Text="1.25x" FontSize="30"/>
-                    <Label Text="1.5x" FontSize="30"/>
-                    <Label Text="1.75x" FontSize="30"/>
-                    <Label Text="2x" FontSize="30"/>
+                    <Label x:Name="LabelSpeedOne" Text="1x" FontSize="30">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="LabelSpeedOne_Clicked"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label x:Name="LabelSpeedOneTwoFive" Text="1.25x" FontSize="30">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="LabelSpeedOneTwoFive_Clicked"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label x:Name="LabelSpeedOneFive" Text="1.5x" FontSize="30">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="LabelSpeedOneFive_Clicked"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label x:Name="LabelSpeedOneSevenFive" Text="1.75x" FontSize="30">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="LabelSpeedOneSevenFive_Clicked"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label x:Name="LabelSpeedTwo" Text="2x" FontSize="30">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="LabelSpeedTwo_Clicked"/>
+                        </Label.GestureRecognizers>
+                    </Label>
 
-            </HorizontalStackLayout>
+                </HorizontalStackLayout>
             </VerticalStackLayout>
+            
+            <Button x:Name="ButtonStart" Text="Начать" BackgroundColor="Gray" 
+                    WidthRequest="250" Margin="0,-40,0,0" FontSize="20" Clicked="ButtonStart_Clicked"/>
+            <Button x:Name="ButtonPause" Text="Пауза" BackgroundColor="Gray" 
+                    WidthRequest="250" Margin="0,-40,0,0" FontSize="20" Clicked="ButtonPause_Clicked" IsVisible="False"/>
+            <Button x:Name="ButtonContinue" Text="Продолжить" BackgroundColor="Gray" 
+                    WidthRequest="250" Margin="0,-40,0,0" FontSize="20" Clicked="ButtonContinue_Clicked" IsVisible="False"/>
+            <Button x:Name="ButtonStop" Text="Стоп" BackgroundColor="Gray" 
+                    WidthRequest="250" Margin="0,-50,0,0" FontSize="20" Clicked="ButtonStop_Clicked" IsVisible="False"/>
+
         </VerticalStackLayout>
     </ScrollView>
 
