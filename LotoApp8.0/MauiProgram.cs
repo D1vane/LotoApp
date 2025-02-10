@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Maui;
+using Maui.TouchEffect.Hosting;
 using Microsoft.Extensions.Logging;
 using Plugin.Maui.Audio;
 
@@ -13,6 +14,7 @@ namespace LotoApp8._0
                 .UseMauiApp<App>()
                 .UseMauiCommunityToolkit()
                 .UseMauiCommunityToolkitMediaElement()
+                .UseMauiTouchEffect()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

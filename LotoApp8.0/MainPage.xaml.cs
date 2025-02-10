@@ -28,11 +28,11 @@ namespace LotoApp8._0
         /// Завершение счета
         /// </summary>
         bool isStoped = false;
-        
+
         /// <summary>
         /// Начало счета
         /// </summary>
-        int startIndex = 0;
+        readonly int startIndex = 0;
 
         /// <summary>
         /// Продолжение счета
@@ -42,27 +42,27 @@ namespace LotoApp8._0
         /// <summary>
         /// Задержка при скорости 1х
         /// </summary>
-        int delayOne = 2000;
+        readonly int delayOne = 2000;
 
         /// <summary>
         /// Задержка при скорости 1.25x
         /// </summary>
-        int delayOneTwoFive = 1750;
+        readonly int delayOneTwoFive = 1750;
 
         /// <summary>
         /// Задержка при скорости 1.5x
         /// </summary>
-        int delayOneFive = 1500;
+        readonly int delayOneFive = 1500;
 
         /// <summary>
         /// Задержка при скорости 1.75x
         /// </summary>
-        int delayOneSevenFive = 1250;
+        readonly int delayOneSevenFive = 1250;
 
         /// <summary>
         /// Задержка при скорости 2x
         /// </summary>
-        int delayTwo = 1000;
+        readonly int delayTwo = 1000;
         /// <summary>
         /// Скорость воспроизведения
         /// </summary>
@@ -119,7 +119,7 @@ namespace LotoApp8._0
             ButtonStart.IsVisible = false;
             ButtonPause.IsVisible = true;
             ButtonStop.IsVisible = true;
-
+            if (isStoped) isStoped = false;
             Speaker(startIndex);
             
         }
@@ -131,10 +131,10 @@ namespace LotoApp8._0
         {
             for (int i = currentIndex; i < countOfNumbers; i++)
             {
-
                 var player = audioManger.CreatePlayer(await FileSystem.OpenAppPackageFileAsync(NumbersInVoice.SwitchNumbers(numbers[i],currentSpeed)));
                 LabelCurrentNumber.Text = Convert.ToString(numbers[i]);
                 SliderOfNumbers.Value = i + 1;
+                
                 // Воспроизведение записи
                 player.Play();
                 if (currentSpeed == 1) await Task.Delay(delayOne);
@@ -175,6 +175,7 @@ namespace LotoApp8._0
             ButtonStop.IsVisible = false;
             ButtonStart.IsVisible = true;
             SliderOfNumbers.Value = 1;
+            if (isPaused) isPaused = false;
         }
 
         private void ButtonContinue_Clicked(object sender, EventArgs e)
@@ -189,6 +190,7 @@ namespace LotoApp8._0
         {
             currentSpeed = 1;
             LabelCurrentSpeed.Text = "1x";
+            
         }
 
         private void LabelSpeedOneTwoFive_Clicked(object sender, TappedEventArgs e)

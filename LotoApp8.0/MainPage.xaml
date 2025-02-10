@@ -66,28 +66,39 @@
                 SemanticProperties.Description="Текущая скорость воспроизведения"/>
 
                 <HorizontalStackLayout Spacing="15" HorizontalOptions="Center">
-
-                    <Label x:Name="LabelSpeedOne" Text="1x" FontSize="30">
+                    
+                    <Label x:Name="LabelSpeedOne" Text="1x" FontSize="30" TouchEffect.PressedOpacity="0.5" 
+                           TouchEffect.AnimationDuration="150" 
+                           TouchEffect.PressedBackgroundColor="Gray">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="LabelSpeedOne_Clicked"/>
                         </Label.GestureRecognizers>
+                        
                     </Label>
-                    <Label x:Name="LabelSpeedOneTwoFive" Text="1.25x" FontSize="30">
+                    <Label x:Name="LabelSpeedOneTwoFive" Text="1.25x" FontSize="30" TouchEffect.PressedOpacity="0.5" 
+                           TouchEffect.AnimationDuration="150" 
+                           TouchEffect.PressedBackgroundColor="Gray">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="LabelSpeedOneTwoFive_Clicked"/>
                         </Label.GestureRecognizers>
                     </Label>
-                    <Label x:Name="LabelSpeedOneFive" Text="1.5x" FontSize="30">
+                    <Label x:Name="LabelSpeedOneFive" Text="1.5x" FontSize="30" TouchEffect.PressedOpacity="0.5" 
+                           TouchEffect.AnimationDuration="150" 
+                           TouchEffect.PressedBackgroundColor="Gray">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="LabelSpeedOneFive_Clicked"/>
                         </Label.GestureRecognizers>
                     </Label>
-                    <Label x:Name="LabelSpeedOneSevenFive" Text="1.75x" FontSize="30">
+                    <Label x:Name="LabelSpeedOneSevenFive" Text="1.75x" FontSize="30" TouchEffect.PressedOpacity="0.5" 
+                           TouchEffect.AnimationDuration="150" 
+                           TouchEffect.PressedBackgroundColor="Gray">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="LabelSpeedOneSevenFive_Clicked"/>
                         </Label.GestureRecognizers>
                     </Label>
-                    <Label x:Name="LabelSpeedTwo" Text="2x" FontSize="30">
+                    <Label x:Name="LabelSpeedTwo" Text="2x" FontSize="30" TouchEffect.PressedOpacity="0.5" 
+                           TouchEffect.AnimationDuration="150" 
+                           TouchEffect.PressedBackgroundColor="Gray">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="LabelSpeedTwo_Clicked"/>
                         </Label.GestureRecognizers>
