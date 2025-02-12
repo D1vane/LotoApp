@@ -142,16 +142,14 @@ namespace LotoApp8._0
                 else if (currentSpeed == 15) await Task.Delay(delayOneFive);
                 else if (currentSpeed == 175) await Task.Delay(delayOneSevenFive);
                 else await Task.Delay(delayTwo);
-
+                player.Dispose();
                 if (isStoped)
                 {
-                    player.Dispose();
                     isStoped = false;
                     return;
                 }
                 if (isPaused)
                 {
-                    player.Dispose();
                     // При возобновлении воспроизведения начнется со след числа
                     this.currentIndex = i+1;
                     return;
