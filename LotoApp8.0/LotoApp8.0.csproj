@@ -40,7 +40,7 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiSplashScreen Color="White" Include="Resources\Splash\lotosplashscreen.png" BaseSize="945,945" />
+		<MauiSplashScreen Color="#FFFEE3" Include="Resources\Splash\lotosplashscreen.png" BaseSize="302,302" />
 		<!-- Splash Screen -->
 
 		<!-- Images -->
