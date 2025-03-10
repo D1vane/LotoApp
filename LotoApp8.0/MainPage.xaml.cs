@@ -92,7 +92,7 @@ namespace LotoApp8._0
         /// <param name="e"></param>
         async private void LabelCurrentNumber_Clicked(object sender, TappedEventArgs e)
         {
-            var number = await DisplayPromptAsync("Число", "Введите Число:", "OK", "Отмена", null, 2, Keyboard.Numeric);
+            var number = await DisplayPromptAsync("Поиск позиции числа", "Введите Число:", "OK", "Отмена", null, 2, Keyboard.Numeric);
             if (number != null)
             {
                 LabelCurrentNumber.Text = number;
